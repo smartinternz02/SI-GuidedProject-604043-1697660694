@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <h1>Sales Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="store">Store:</label>
+        <input type="text" id="store" name="store"><br><br>
+
+        <label for="dept">Department:</label>
+        <input type="text" id="dept" name="dept"><br><br>
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date"><br><br>
+
+        <!-- <label for="isHolidayRadio">Is Holiday:</label>
+        <input type="radio" id="isHolidayYes" name="isHolidayRadio" value="1">
+        <label for="isHolidayYes">Yes</label>
+        <input type="radio" id="isHolidayNo" name="isHolidayRadio" value="0">
+        <label for="isHolidayNo">No</label><br><br> -->
+        <label for="holiday">Is Holiday</label>
+        <select name="h">
+            <option value="yes">YES</option>
+            <option value="no">No</option>
+        </select><br><br>
+
+        <label for="size">Size:</label>
+        <input type="text" id="size" name="size"><br><br>
+
+        <label for="temp">Temperature:</label>
+        <input type="text" id="temp" name="temp"><br><br>
+
+
+        <label for="fuel">Fule Prices:</label>
+        <input type="text" id="fuel" name="fuel"><br><br>
+        <label for="CPI">CPI:</label>
+        <input type="text" id="CPI" name="CPI"><br><br>
+        <label for="unemployment">unemployment:</label>
+        <input type="text" id="unemployment" name="unemployment"><br><br>
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type"><br><br>
+
+        <input type="submit" value="Predict">
+        <h2><b>{{y}}</b></h2>
+    </form>
+</body>
+
+</html>
